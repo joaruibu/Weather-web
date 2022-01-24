@@ -2,13 +2,13 @@
 
 const tl = gsap.timeline({ defaults: 'power1.out' });
 
-tl.to('.text', { y: '0%', duration: 2, stagger: 1.5 });
+tl.to('.text', { y: '0%', duration: 1, stagger: 1 });
 
 
 
 const api = {
     key: '1dce9dc1dfba699c6da05c18c3e95300',
-    baseurl:'http://api.openweathermap.org/data/2.5/'
+    baseurl:'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/'
 }
 
 const searchbox = document.querySelector('.search-city');
@@ -49,7 +49,7 @@ function displayResults(weather) {
     console.log(weather);
 
     let icon = document.querySelector('.weather-icon'); 
-    icon.innerHTML = `<img  class="weather-icon__element" src="/icons/${weather.weather[0].icon}.png" />`
+    icon.innerHTML = `<img  class="weather-icon__element" src="./icons/${weather.weather[0].icon}.png" />`
 
     let city = document.querySelector('.main-info__city');
     city.innerHTML = `${weather.name}`;
