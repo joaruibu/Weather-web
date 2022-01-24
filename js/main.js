@@ -49,7 +49,7 @@ function displayResults(weather) {
     console.log(weather);
 
     let icon = document.querySelector('.weather-icon'); 
-    icon.innerHTML = `<img  class="weather-icon__element" src="/icons/${weather.weather[0].icon}.png" />`
+    icon.innerHTML = `<img  class="weather-icon__element" src="./icons/${weather.weather[0].icon}.png" />`
 
     let city = document.querySelector('.main-info__city');
     city.innerHTML = `${weather.name}`;
