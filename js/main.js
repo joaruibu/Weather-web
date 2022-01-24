@@ -8,7 +8,7 @@ tl.to('.text', { y: '0%', duration: 2, stagger: 1.5 });
 
 const api = {
     key: '1dce9dc1dfba699c6da05c18c3e95300',
-    baseurl:'http://api.openweathermap.org/data/2.5/'
+    baseurl:'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/'
 }
 
 const searchbox = document.querySelector('.search-city');
