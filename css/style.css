@@ -240,7 +240,7 @@ body {
   color: var(--lightGrey);
   text-align: center;
   outline: none;
-
+  z-index: 10;
   background-color: var(--dark);
   transition: 0.4s ease-in-out;
 }

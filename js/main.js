@@ -1,14 +1,13 @@
 //Animación entrada de app
 
-const tl = gsap.timeline({ defaults: 'power1.out' });
-
+const tl = gsap.timeline();
 tl.to('.text', { y: '0%', duration: 1, stagger: 1 });
 
 
 
 const api = {
     key: '1dce9dc1dfba699c6da05c18c3e95300',
-    baseurl:'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/'
+    baseurl: 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/',
 }
 
 const searchbox = document.querySelector('.search-city');
@@ -38,6 +37,8 @@ function setQuery(evt) {
 
 
 function getResults(query) {
+
+
     fetch(`${api.baseurl}weather?q=${query}&lang=es&units=metric&appid=${api.key}`)
         .then(weather => {
             return weather.json();
